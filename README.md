@@ -55,6 +55,10 @@ __$ r__ = domain restart
   - Change the __GF_ASADMIN__ variable with your full path to ```/glassfish3/glassfish/bin/asadmin```
 
 <br>
+
+- Restart your terminal emulator.
+
+<br>
 On my machine, it works!
 
 (Vovolinux)
