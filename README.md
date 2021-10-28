@@ -34,7 +34,7 @@ __$ r__ = domain restart
 
 <br>
 
-- Include into *.shrc...
+- Include into ```.*shrc...```
 
   - ...for bash users
 
