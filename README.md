@@ -24,7 +24,7 @@ __$ r__ = domain restart
 
 - Download __gf3-admin.sh__ file
 
-  <pre>$ wget https://raw.githubusercontent.com/Viniciusalopes/glassfish3-server-admin/main/gf3-admin.sh -O $HOME/gf3-admin.sh</pre>
+  <pre>$ wget https://raw.githubusercontent.com/Viniciusalopes/glassfish3-server-admin/main/gf3-admin.sh -O $HOME/.gf3-admin.sh</pre>
 
 <br>
 
@@ -38,13 +38,13 @@ __$ r__ = domain restart
 
   - ...for bash users
 
-    <pre>$ echo -e "\n# Shortcuts for Glassfish3 Server Administration - By Vovolinux $(date "+%Y-%m-%d - %H:%M:%S")\nsource $HOME/gf3-admin.sh\n\n" >> $HOME/.bashrc</pre>
+    <pre>$ echo -e "\n# Shortcuts for Glassfish3 Server Administration - By Vovolinux $(date "+%Y-%m-%d - %H:%M:%S")\nsource $HOME/.gf3-admin.sh\n\n" >> $HOME/.bashrc</pre>
 
     <br>
 
   - ...for zsh users
 
-    <pre>$ echo -e "\n# Shortcuts for Glassfish3 Server Administration - By Vovolinux $(date "+%Y-%m-%d - %H:%M:%S")\nsource $HOME/gf3-admin.sh\n\n" >> $HOME/.zshrc</pre>
+    <pre>$ echo -e "\n# Shortcuts for Glassfish3 Server Administration - By Vovolinux $(date "+%Y-%m-%d - %H:%M:%S")\nsource $HOME/.gf3-admin.sh\n\n" >> $HOME/.zshrc</pre>
 
 <br>
 
