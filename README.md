@@ -24,7 +24,7 @@ __$ r__ = domain restart
 
 - Download __gf3-admin.sh__ file
 
-  <pre>$ wget https://github.com/Viniciusalopes/glassfish3-server-admin -O $HOME/gf3-admin.sh</pre>
+  <pre>$ wget https://raw.githubusercontent.com/Viniciusalopes/glassfish3-server-admin/main/gf3-admin.sh -O $HOME/gf3-admin.sh</pre>
 
 <br>
 
