@@ -20,7 +20,10 @@
 #
 
 GF_PORT="8080"
-GF_ASADMIN="/home/semad/weboutorga/tools/glassfish3/glassfish/bin/asadmin"
+GF_HOME="/home/semad/weboutorga/glassfish3/glassfish"
+GF_DOMAIN="${GF_HOME}/domains/domain1"
+GF_ASADMIN="${GF_HOME}/bin/asadmin"
+
 alias fuser_domain="fuser ${GF_PORT}/tcp"
 
 #------------------------------- END-VARIABLES --------------------------------<
@@ -37,11 +40,25 @@ status_domain()
     printf %b "> domain is ${GF_STATUS}!\n"
 }
 
+clean_server() {
+    local current_path=$PWD
+    cd $GF_DOMAIN
+    sudo rm -rfv applications/*
+    sudo rm -rfv imq/*
+    sudo rm -rfv generated/*
+    sudo rm -rfv osgi-cache/*
+    sudo rm -rfv session-store/*
+    sudo rm -rfv lib/databases/*
+    cd $current_path
+}
+
 #------------------------------- END-FUNCTIONS --------------------------------<
 
 
 #---------------------------------- COMMANDS ---------------------------------->
 #
+# clean server
+alias c="clean_server"
 
 # domain status
 alias ds="status_domain"
@@ -50,13 +67,14 @@ alias ds="status_domain"
 alias s="${GF_ASADMIN} start-domain; ds"
 
 # domain stop
-alias t="${GF_ASADMIN} stop-domain; ds"
+alias t="${GF_ASADMIN} stop-domain; c; ds"
 
 # domain kill
 alias k="fuser_domain -k; ds"
 
 # domain restart
 alias r="k && s"
+
 
 
 #-------------------------------- END-COMMANDS --------------------------------<
