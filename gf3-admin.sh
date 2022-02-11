@@ -49,6 +49,13 @@ clean_server() {
     sudo rm -rfv osgi-cache/*
     sudo rm -rfv session-store/*
     sudo rm -rfv lib/databases/*
+    #sudo rm -rfv domains/domain1/logs/*log*
+    cd /home/semad/weboutorga/glassfish3/glassfish/domains/domain1/logs
+    pwd
+    sudo rm -rfv *.log
+    sudo rm -rfv server.log_*
+    #sudo rm -rfv /home/semad/weboutorga/glassfish3/glassfish/domains/domain1/logs/*.log
+    #sudo rm -rfv /home/semad/weboutorga/glassfish3/glassfish/domains/domain1/logs/server.log_*
     cd $current_path
 }
 
@@ -67,7 +74,7 @@ alias ds="status_domain"
 alias s="${GF_ASADMIN} start-domain; ds"
 
 # domain stop
-alias t="${GF_ASADMIN} stop-domain; c; ds"
+alias t="${GF_ASADMIN} stop-domain; ds"
 
 # domain kill
 alias k="fuser_domain -k; ds"
